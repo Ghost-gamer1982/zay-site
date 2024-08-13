@@ -1,0 +1,566 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zatech</title>
+
+ 
+    <link rel="stylesheet" href="swiper-bundle.min.css">
+
+    <!-- Scroll Reveal -->
+    <link rel="stylesheet" href="scrollreveal.js">
+
+    <!-- Boxicons -->
+    <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
+        
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .social-icon {
+            font-size: 35px; /* Adjust size as needed */
+            color: red; /* Adjust color as needed */
+            margin-right: 10px; /* Optional: Adjust spacing between icons */
+        }
+    </style>
+    <script>
+        function showFullImage(imageSrc) {
+            // Create overlay container
+            var overlay = document.createElement('div');
+            overlay.className = 'overlay';
+            overlay.onclick = function() {
+                document.body.removeChild(overlay);
+            };
+    
+            // Create image element inside overlay
+            var img = document.createElement('img');
+            img.src = imageSrc;
+            overlay.appendChild(img);
+    
+            // Append overlay to body
+            document.body.appendChild(overlay);
+        }
+        
+    function showVideo(videoSrc, backgroundSrc) {
+        // Create overlay container
+        var overlay = document.createElement('div');
+        overlay.className = 'overlay';
+        
+        // Create video player inside overlay
+        var videoPlayer = document.createElement('div');
+        videoPlayer.className = 'video-player';
+        
+        // Create video element
+        var video = document.createElement('video');
+        video.controls = true;
+        var source = document.createElement('source');
+        source.src = videoSrc;
+        source.type = 'video/mp4';
+        video.appendChild(source);
+        videoPlayer.appendChild(video);
+        
+        // Create close button
+        var closeButton = document.createElement('div');
+        closeButton.className = 'close-button';
+        closeButton.innerHTML = '<i class="bx bx-x"></i>';
+        closeButton.onclick = function() {
+            document.body.removeChild(overlay);
+        };
+        
+        // Create background image for video thumbnail
+        var backgroundImg = document.createElement('img');
+        backgroundImg.className = 'background-img';
+        backgroundImg.src = backgroundSrc;
+        videoPlayer.appendChild(backgroundImg);
+        
+        // Append video player and close button to overlay
+        overlay.appendChild(videoPlayer);
+        overlay.appendChild(closeButton);
+        
+        // Append overlay to body
+        document.body.appendChild(overlay); 
+        
+        // // Close video player on user interaction
+        // document.addEventListener('keydown', closeVideoOnInteraction);
+        // document.addEventListener('touchstart', closeVideoOnInteraction);
+        // document.addEventListener('scroll', closeVideoOnInteraction);
+        
+        // function closeVideoOnInteraction() {
+        //     document.body.removeChild(overlay);
+        //     document.removeEventListener('keydown', closeVideoOnInteraction);
+        //     document.removeEventListener('touchstart', closeVideoOnInteraction);
+        //     document.removeEventListener('scroll', closeVideoOnInteraction);
+        // }
+    }
+</script>
+</head>
+<body>
+<!-- Header -->
+    <header class="header">
+            <nav class="nav container flex">
+                    <a href="#" class="logo-content flex">
+                        
+                        <span class="logo-text">ZATECH_BY_ZAYLIE</span>
+                    </a>
+
+                    <div class="menu-content">
+                            <ul class="menu-list flex">
+                                    <li><a href="#home" class="nav-link active-navlink">home</a></li>
+                                    <li><a href="#about" class="nav-link">about</a></li>
+                                    <li><a href="#menu" class="nav-link">services</a></li>
+                                    <li><a href="#review" class="nav-link">review</a></li>
+                            </ul>
+
+                            <div class="media-icons flex">
+                                 
+                                <a href="https://wa.me/+2348125645000?text=Hi+Zatech"><i class='bx bxl-whatsapp social-icon' ></i></a>
+                                <a href="https://www.instagram.com/zatech_by_zaylie?igsh=YzloejR0YTg3eHp4&utm_source=qr"><i class='bx bxl-instagram-alt social-icon' ></i></a>
+                              
+                                 
+                            </div>
+
+                            <i class='bx bx-x navClose-btn'></i>
+                        </div>
+                        
+                        <div class="contact-content flex">
+                            <i class='bx bx-phone phone-icon' ></i>
+                            <span class="phone-number">08125645000</span>
+                        </div>
+
+                        <i class='bx bx-menu navOpen-btn'></i>
+                </nav>
+        
+    </header>
+
+<!-- Home Section -->
+    <main>
+        <section class="home" id="home">
+                <div class="home-content">
+                        <div class="swiper mySwiper">
+                                <div class="swiper-wrapper">
+                                        <div class="swiper-slide">
+                                                <img src="logo1.png" height="1280" width="1920" class="home-img">
+
+                                                <div class="home-details">
+                                                        <div class="home-text">
+                                                                
+                                                                <h4 class="homeSubtitle">At ZATECH, We Offer: </h4>
+                                                                <h5 class="homeTitle">Creative design solutions. <br> Graphics services. <br>Website/App-Development. <br>And so much more... </h2>
+                                                        </div>
+                                                        <a href="#about">
+                                                        <button class="button">Explore</button>
+                                                </div>
+                                        </div>
+
+                                        <div class="swiper-slide">
+                                                <img src="logo2.png" alt="" class="home-img">
+
+                                                <div class="home-details">
+                                                        <div class="home-text">
+                                                                <h4 class="homeSubtitle">Discover top-notch Tech Solutions.</h4>
+                                                                <h2 class="homeTitle">Experience Our Premium <br>  Tech and Graphic Designs</h2>
+                                                        </div>
+                                                        <a href="#about">
+                                                        <button class="button">Explore
+                                                                
+                                                        </button>
+                                                </div>
+                                        </div>
+
+                                        <div class="swiper-slide">
+                                                <img src="logo3.png" alt="" class="home-img">
+
+                                                <div class="home-details">
+                                                        <div class="home-text">
+                                                                <h4 class="homeSubtitle">Built for you.</h4>
+                                                                <h2 class="homeTitle">Tech and Design <br> Made Simple</h2>
+                                                        </div>
+                                                        <a href="#about">
+                                                        <button class="button">Explore</button>
+                                                </div>
+                                        </div>
+                                </div>
+
+                                <div class="swiper-button-next swiper-navBtn"></div>
+                                <div class="swiper-button-prev swiper-navBtn"></div>
+                                <div class="swiper-pagination"></div>
+                        </div>
+                </div>
+        </section>
+
+    
+<!-- About Section -->
+<header class="section-header">
+        <h1>About Us</h1>
+    </header>
+<section class="section about" id="about">
+        <div class="about-content container">
+            <div class="about-imageContent">
+                <img src="log3.png" alt="" class="about-img">
+                <div class="aboutImg-textBox">
+                    <i class='bx bx-heart heart-icon flex'></i>
+                    <p class="content-description">Passionate about creativity and technology, delivering exceptional solutions.</p>
+                </div>
+            </div>
+    
+            <div class="about-details">
+                <div class="about-text">
+                    <h4 class="content-subtitle"><i>Welcome to Zatech</i></h4>
+                    <h2 class="content-title">Merging Creativity <br> with Technology</h2>
+                    <p class="content-description">At Zatech, we blend creativity with technology to deliver exceptional graphic design, websites/app development, marketing, and advertising solutions that our clients love...</p>
+                </div>
+    
+                <div class="about-buttons flex">
+                        <a href="#vid" class="about-link flex">
+                    <button class="button">Learn More</button>
+                    <i class='bx bx-right-arrow-alt about-arrowIcon'></i>
+                  
+                        <!-- <span class="link-text">see more</span>
+                        <i class='bx bx-right-arrow-alt about-arrowIcon'></i> -->
+                    </a>
+                </div>
+            </div>
+        </div>
+      
+</section>
+<header class="section-header">
+        <h1>Short intro-Video</h1>
+    </header>
+    
+<section class="section video-section" id="vid">
+        <div class="video-wrapper">
+                <div class="video-thumbnail" onclick="showVideo('vid1.mp4', 'review1.png')">
+                        <img src="logo3.png" alt="Video Thumbnail">
+                        <div class="play-button">
+                            <i class="bx bx-play-circle"></i>
+                        </div>
+                    </div>
+                
+                <!-- Close button -->
+                <div class="close-button">
+                    <i class="bx bx-x"></i>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    
+    
+<!-- Menu Section -->
+        <section class="section menu" id="menu">
+            <div class="menu-container container">
+                    <div class="meu-text">
+                            <h4 class="section-subtitle"><i>Our Services</i></h4>
+                            <h2 class="section-title">Below are the services we provide</h2>
+                            <p class="section-description">
+                                Zatech integrates advanced architecture and psychological insights to craft tailored spaces that resonate with your brand's digital journey. Our expertise spans graphic design, web/app development, marketing, and advertising, ensuring your online presence captivates and excels.
+                            </p>
+                    </div>
+
+                    <div class="menu-content">
+                            <div class="menu-items">
+                                    <div class="menu-item flex">
+                                            <img src="service3.png" alt="" class="menu-img" onclick="showFullImage('service3.png')">
+
+                                            <div class="menuItem-details">
+                                                    <h4 class="menuItem-topic">Graphics Designing</h4>
+                                                    <p class="menuItem-des">It's widely known that great design captivates. At Zatech,Our designs range from Ai images, flyers, logos, business cards, video editing, Animations, Text Desings E.T.C. We also craft compelling graphics that capture attention and leave lasting impressions</p>
+                                            </div>
+
+                                            <div class="menuItem-price flex">
+                                                  
+                                            </div>
+                                    </div>
+                                    <div class="menu-item flex">
+                                            <img src="service2.png" alt="" class="menu-img" onclick="showFullImage('service2.png')">
+
+                                            <div class="menuItem-details">
+                                                    <h4 class="menuItem-topic">Marketing and Advertisement</h4>
+                                                    <p class="menuItem-des">Marketing and advertising are the backbone of brand success. At Zatech, we specialize in creating strategic campaigns that elevate businesses through effective branding and impactful messaging</p>
+                                            </div>
+
+                                            <div class="menuItem-price flex">
+                                                   
+                                            </div>
+                                    </div>
+                                    <div class="menu-item flex">
+                                            <img src="services4.png" alt="" class="menu-img" onclick="showFullImage('services4.png')">
+
+                                            <div class="menuItem-details">
+                                                    <h4 class="menuItem-topic">Web/Application development</h4>
+                                                    <p class="menuItem-des">Application and website development are at the core of digital transformation. At Zatech, we create applications and websites that amplify your brand's presence and elevate business performance to new heights.</p>
+                                            </div>
+
+                                            <div class="menuItem-price flex">
+                                                    
+                                            </div>
+                                    </div>
+                                    <div class="menu-item flex">
+                                            <img src="service1.png" alt="" class="menu-img" onclick="showFullImage('service1.png')">
+
+                                            <div class="menuItem-details">
+                                                    <h4 class="menuItem-topic">E-books</h4>
+                                                    <p class="menuItem-des">Zatech offers a curated selection of e-books in PDF format, catering to diverse interests and industries. With our reliable delivery service, customers can enjoy their favorite titles in digital or hardcopy format, ensuring easy access to valuable knowledge and entertainment.</p>
+                                            </div>
+
+                                            <div class="menuItem-price flex">
+                                                    
+                                            </div>
+                                    </div>
+                            </div>
+                            
+                                <!-- End Choose Rights -->
+                        </div>
+                            <!-- <div class="time-table">
+                                    <span class="time-topic">Catogries Time</span>
+
+                                    <ul class="time-lists">
+                                            <li class="time-list flex">
+                                                    <span class="open-day"> Sunday</span>
+                                                    <span class="open-time">Closed</span>
+                                            </li>
+                                            <li class="time-list flex">
+                                                    <span class="open-day"> Monday</span>
+                                                    <span class="open-time">7.00am - 3.00pm</span>
+                                            </li>
+                                            <li class="time-list flex">
+                                                    <span class="open-day"> Tuesday</span>
+                                                    <span class="open-time">7.00am - 3.00pm</span>
+                                            </li>
+                                            <li class="time-list flex">
+                                                    <span class="open-day"> Wednesday</span>
+                                                    <span class="open-time">7.00am - 3.00pm</span>
+                                            </li>
+                                            <li class="time-list flex">
+                                                    <span class="open-day"> Thursday</span>
+                                                    <span class="open-time">7.00am - 3.00pm</span>
+                                            </li>
+                                            <li class="time-list flex">
+                                                    <span class="open-day"> Friday</span>
+                                                    <span class="open-time">7.00am - 3.00pm</span>
+                                            </li>
+                                            <li class="time-list flex">
+                                                    <span class="open-day"> Saturday</span>
+                                                    <span class="open-time">9.00am - 2.00pm</span>
+                                            </li>
+                                    </ul>
+                            </div> -->
+                    </div>
+            </div>
+        </section>
+
+    
+<!-- Brand Section -->
+        <section class="section brand">
+            <div class="brand-container container">
+                    <h4 class="section-subtitle"><i>A Few Of Our Works</i></h4>
+                   
+                    <div class="brand-images">
+                            <div class="brand-image">
+                                    <img src="1.png" alt="" class="brand-img" onclick="showFullImage('1.png')">
+                            </div>
+                            <div class="brand-image">
+                                    <img src="2.png" alt="" class="brand-img" onclick="showFullImage('2.png')">
+                            </div>
+                            <div class="brand-image">
+                                    <img src="3.png" alt="" class="brand-img" onclick="showFullImage('3.png')">
+                            </div>
+                            <div class="brand-image">
+                                    <img src="4.png" alt="" class="brand-img" onclick="showFullImage('4.png')">
+                            </div>
+                            <div class="brand-image">
+                                    <img src="5.png" alt="" class="brand-img" onclick="showFullImage('5.png')">
+                            </div>
+                            <div class="brand-image">
+                                <img src="6.png" alt="" class="brand-img" onclick="showFullImage('6.png')">
+                        </div>
+                        <div class="brand-image">
+                                <img src="7.png" alt="" class="brand-img" onclick="showFullImage('7.png')">
+                        </div>
+                        <div class="brand-image">
+                                <img src="8.png" alt="" class="brand-img" onclick="showFullImage('8.png')">
+                        </div>
+                        <div class="brand-image">
+                                <img src="9.png" alt="" class="brand-img" onclick="showFullImage('9.png')">
+                        </div>
+                        <div class="brand-image">
+                                <img src="10.png" alt="" class="brand-img" onclick="showFullImage('10.png')">
+                        </div>
+                        <div class="brand-image">
+                                <img src="11.png" alt="" class="brand-img" onclick="showFullImage('11.png')">
+                        </div>
+                        <div class="brand-image">
+                                <img src="12.png" alt="" class="brand-img" onclick="showFullImage('12.png')">
+                        </div>
+                        <div class="brand-image">
+                                <img src="14.png" alt="" class="brand-img" onclick="showFullImage('14.png')">
+                        </div>
+                        <div class="brand-image">
+                                <img src="15.png" alt="" class="brand-img" onclick="showFullImage('15.png')">
+                        </div>
+                        <div class="brand-image">
+                                <img src="16.png" alt="" class="brand-img" onclick="showFullImage('16.png')">
+                        </div>
+                        <div class="brand-image">
+                                <img src="17.png" alt="" class="brand-img" onclick="showFullImage('17.png')">
+                        </div>
+                        <div class="brand-image">
+                                <img src="18.png" alt="" class="brand-img" onclick="showFullImage('18.png')">
+                        </div>
+                        <div class="brand-image">
+                                <img src="19.png" alt="" class="brand-img" onclick="showFullImage('19.png')">
+                        </div>
+                        <div class="brand-image">
+                                <img src="20.png" alt="" class="brand-img" onclick="showFullImage('20.png')">
+                        </div>
+                        <div class="brand-image">
+                                <img src="21.png" alt="" class="brand-img" onclick="showFullImage('21.png')">
+                        </div>
+
+                    </div>
+            </div>
+        </section>
+
+    
+<!-- Reviews Section -->
+        <section class="section review" id="review">
+            <div class="review-container container">
+                    <div class="review-text">
+                            <h4 class="section-subtitle"><i>Reviews</i></h4>
+                            <h2 class="section-title">Reviews from some of our clients</h2>
+                    </div>
+
+                    <div class="tesitmonial swiper mySwiper">
+                            <div class="swiper-wrapper">
+                                    <div class="testi-content swiper-slide flex">
+                                            <img src="review1.png" alt="" class="review-img">
+                                            <p class="review-quote">With the help of Zatech and their top Notch marketing and advertisements, i can proudly say that my Event planning business is going perfect!!! I get customers easily and honestly i would just like to say a big THANK YOU to Zaylie... The CEO of Zatech. </p>
+                                            <i class='bx bxs-quote-alt-left quote-icon'></i>
+
+                                            <div class="testi-personDetails flex">
+                                                    <span class="name">James Victor</span>
+                                                    <span class="job">Event Planner</span>
+                                            </div>
+                                    </div>
+                                    <div class="testi-content swiper-slide flex">
+                                            <img src="review2.png" alt="" class="review-img">
+                                            <p class="review-quote">Wow! I have alot to say but i'll make it short. Zatech by Zaylie definitely took my business to the next level with their top quality graphics designs that appeals and captivates Customers. I'd just like to use this moment to appreciate everyone at Zatech for the special work they're doing.</p>
+                                            <i class='bx bxs-quote-alt-left quote-icon'></i>
+
+                                            <div class="testi-personDetails flex">
+                                                    <span class="name">Victoria Omale</span>
+                                                    <span class="job">Real Estate Agent</span>
+                                            </div>
+                                    </div>
+                                    <div class="testi-content swiper-slide flex">
+                                            <img src="review3.png" alt="" class="review-img">
+                                            <p class="review-quote">At one point in time... I was only getting about 3-4 customers per month for my Perfume/Jewellery business. It was very sad to be honest but that was how i got in-touch with Zatech and my whole business Changed to something else... I don't even know how to describe it because words aren't enough. But Zatech really helped me alot. Thanks ZATECH_BY_ZAYLIE</p>
+                                            <i class='bx bxs-quote-alt-left quote-icon'></i>
+
+                                            <div class="testi-personDetails flex">
+                                                    <span class="name">Rose David</span>
+                                                    <span class="job">Business Owner</span>
+                                            </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-button-next swiper-navBtn"></div>
+                                <div class="swiper-button-prev swiper-navBtn"></div>
+                                <div class="swiper-pagination"></div>
+                    </div>
+            </div>
+        </section>
+
+    
+<!-- Newsletter Section -->
+        
+                   
+            
+     
+        
+    
+<!-- Footer Section -->
+        <footer class="section footer">
+            <div class="footer-container container">
+                    <div class="footer-content">
+                        <a href="#" class="logo-content flex">
+                            
+                            </a>
+
+                            <p class="content-description">Zatech was designed and created to take both you and your business/brand to the Next level. What are you waiting for? Contact us NOW!!!</p>
+                       
+                            
+                    </div>
+
+                    <div class="footer-linkContent">
+                            
+                            <ul class="footer-links">
+                                    <h4 class="footerLinks-title"></h4>
+                                    <li><a href="#home" class="footer-link">Home-Page</a></li>
+                                    <li><a href="#menu" class="footer-link">Services</a></li>
+                                    <li><a href="#about" class="footer-link">About Us </a></li>
+                            </ul>
+                            <ul class="footer-links">
+                                    <h4 class="footerLinks-title">Support</h4>
+
+                                    <li><a href="#" class="footer-link">About Us</a></li>
+                                    <li><a href="" class="footer-link">Contact Us Below</a></li>
+                                                     
+                        <a href="https://wa.me/+2348125645000?text=Hi+Zatech"><i class='bx bxl-whatsapp social-icon' ></i></a>
+                        <a href="https://www.instagram.com/zatech_by_zaylie?igsh=YzloejR0YTg3eHp4&utm_source=qr"><i class='bx bxl-instagram-alt social-icon' ></i></a>
+                        
+                                  
+                            </ul>
+                    </div>
+                    <div class="footer-location flex">
+                        <i class='bx bx-map map-icon'></i>
+                        
+                        <div class="location-text">
+                                Wuse 2, Abuja, Nigeria
+                        </div>
+                    </div>
+                    
+            </div>
+            <div class="footer-copyRight">&#169; Zatech. All rights reserved</div>
+        </footer>
+
+<!-- Scroll Up -->
+        <a href="#home" class="scrollUp-btn flex">
+                <i class='bx bx-up-arrow-alt scrollUp-icon'></i>
+        </a>
+
+</main>
+
+<!-- Swiper JS -->
+<script src="swiper-bundle.min.js"></script>
+
+<!-- Scroll Reveal -->
+<script src="scrollreveal.js"></script>
+
+<!-- JavaScript -->
+    <script src="script.js"></script>
+    <script type="module">
+        // Import the functions you need from the SDKs you need
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.5/firebase-app.js";
+        import { getAnalytics } from "https://www.gstatic.com/firebasejs/10.12.5/firebase-analytics.js";
+        // TODO: Add SDKs for Firebase products that you want to use
+        // https://firebase.google.com/docs/web/setup#available-libraries
+      
+        // Your web app's Firebase configuration
+        // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+        const firebaseConfig = {
+          apiKey: "AIzaSyDdswMUnP7XxU6jY8fpb3VDK0IA6s5QEAk",
+          authDomain: "zay-website-91bba.firebaseapp.com",
+          projectId: "zay-website-91bba",
+          storageBucket: "zay-website-91bba.appspot.com",
+          messagingSenderId: "655464521383",
+          appId: "1:655464521383:web:b0102616690752821bc582",
+          measurementId: "G-XYEDSRRMHP"
+        };
+      
+        // Initialize Firebase
+        const app = initializeApp(firebaseConfig);
+        const analytics = getAnalytics(app);
+      </script>
+</body>
+</html>
